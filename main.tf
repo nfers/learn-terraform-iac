@@ -17,8 +17,9 @@ provider "aws" {
 resource "aws_instance" "app_server" {
     ami = "ami-03f65b8614a860c29"
     instance_type = "t2.micro"
+    key_name = "terraform-iac"
 
     tags = {
-      Name = "ExampleServerInstance"
+      Name = "First Instance"
     }
 }
